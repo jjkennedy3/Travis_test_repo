@@ -1,9 +1,10 @@
-require 'rspec/core/rake_task'
-task :default => :spec
-RSpec::Core::RakeTask.new
+#require 'rspec/core/rake_task'
+#task :default => :spec
+#RSpec::Core::RakeTask.new
 
+task :default => ["my_task"]
 desc "Print reminder about eating more fruit."
 
-task :apple do
+task :my_task do
   puts "Eat more apples!"
 end
