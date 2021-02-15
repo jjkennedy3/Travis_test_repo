@@ -9,6 +9,11 @@ task :my_task => ["task_two"] do
   puts "Eat more apples!"
 end
 
-task :task_two do
+task :task_two => ["shell_task"] do
   puts "In task_two"
+end
+
+desc 'Run unit tests'
+task :shell_task do
+    sh 'ls -ltr'
 end
